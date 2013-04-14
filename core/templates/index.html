@@ -1,0 +1,19 @@
+<html>
+<head>
+	<title> Agenda </title>
+</head>
+<body>
+
+	<h1> Agenda </h1>
+
+	<a href="{% url add %}"> Criar Atividade </a>
+
+	<h3> Suas Atividades: </h3>
+
+	{% for atividade in atividades %}
+		{{ atividade.id }} - {{ atividade.nome }} ({{ atividade.horario }})
+		<br/>
+	{% endfor %}
+
+</body>
+</html>
